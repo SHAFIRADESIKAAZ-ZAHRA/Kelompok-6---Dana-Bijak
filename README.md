@@ -17,16 +17,14 @@
 ![CD](https://github.com/user-attachments/assets/14ea03ea-7dd9-4e5b-ae84-d9d5cffdeb9c)
 
 
-**Link Figma**
+## Link Figma
 
-wireframe
+- **Wireframe**  
+  [Klik Untuk Melihat Design Figma Wireframe](https://www.figma.com/design/KpCUf5XlPZjLNegDaq3tAd/Wireframe-DanaBijak?node-id=0-1&t=OWqqCUaQi68z5Ruh-1)
 
-https://www.figma.com/design/KpCUf5XlPZjLNegDaq3tAd/Wireframe-DanaBijak?node-id=0-1&t=OWqqCUaQi68z5Ruh-1
+- **Mockup**  
+  [Klik Untuk Melihat Design Figma Mockup](https://www.figma.com/design/iWp8d4WRSt4OK26mDR0kxT/MOCKUP--PBW?node-id=0-1&t=UYJfVfFTW0PsP8zS-1)
 
-mockup
+## Link YouTube
 
-https://www.figma.com/design/iWp8d4WRSt4OK26mDR0kxT/MOCKUP--PBW?node-id=0-1&t=UYJfVfFTW0PsP8zS-1
-
-**Link YouTube**
-
-https://youtu.be/KdbiWNJgNyA
+[Klik Untuk Melihat Penjelasan Link YouTube](https://youtu.be/KdbiWNJgNyA)
