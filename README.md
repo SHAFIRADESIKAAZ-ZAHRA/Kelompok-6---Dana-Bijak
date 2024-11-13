@@ -13,7 +13,7 @@ Fitur Utama DanaBijak:
 ---------------------------------------------------------------------------------
 Misi DanaBijak adalah membantu setiap orang mencapai keseimbangan finansial yang lebih stabil dan sehat melalui manajemen yang lebih cerdas.
 
-
+---------------------------------------------------------------------------------
 **ERD**
 ![WhatsApp Image 2024-11-12 at 23 27 00_b4d7d39b](https://github.com/user-attachments/assets/d9782ae4-1b25-40b6-aaf7-00173802f6ed)
 
