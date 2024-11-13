@@ -37,4 +37,3 @@ Misi DanaBijak adalah membantu setiap orang mencapai keseimbangan finansial yang
 ## Link YouTube
 
 [Klik Untuk Melihat Penjelasan Link YouTube](https://youtu.be/KdbiWNJgNyA)
->>>>>>> 381b677ad63f848c1917e85d55ed7acb27a26ac2
