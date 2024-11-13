@@ -4,12 +4,15 @@
 - Shafira Desika Az-Zahra - 4522210084
 
 **ERD**
+
 ![WhatsApp Image 2024-11-12 at 23 27 00_b4d7d39b](https://github.com/user-attachments/assets/d9782ae4-1b25-40b6-aaf7-00173802f6ed)
 
 **Use Case**
+
 ![UseCase DanaBijak](https://github.com/user-attachments/assets/7072a54d-114b-4ce8-826e-f1d3423ae747)
 
 **Class Diagram**
+
 ![CD](https://github.com/user-attachments/assets/14ea03ea-7dd9-4e5b-ae84-d9d5cffdeb9c)
 
 **Link Figma**
