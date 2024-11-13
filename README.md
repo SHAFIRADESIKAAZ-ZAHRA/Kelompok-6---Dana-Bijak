@@ -59,7 +59,7 @@ This project is open-sourced software licensed under the [MIT license](https://o
 - Shafira Desika Az-Zahra - 4522210084
 
 ---------------------------------------------------------------------------------
-Dana Bijak adalah sebuah platform manajemen keuangan yang dikembangkan untuk membantu individu dan keluarga dalam mengelola pemasukan dan pengeluaran secara lebih bijaksana dan efisien. Dengan antarmuka yang mudah digunakan, Dana Bijak memungkinkan pengguna untuk mencatat transaksi harian dan mengatur pengeluaran dalam berbagai kategori. Tujuannya adalah untuk membantu pengguna merencanakan keuangan lebih baik, baik untuk kebutuhan sehari-hari maupun untuk mencapai tujuan finansial jangka panjang.
+DanaBijak adalah sebuah platform manajemen keuangan yang dikembangkan untuk membantu individu dan keluarga dalam mengelola pemasukan dan pengeluaran secara lebih bijaksana dan efisien. Dengan antarmuka yang mudah digunakan, DanaBijak memungkinkan pengguna untuk mencatat transaksi harian dan mengatur pengeluaran dalam berbagai kategori. Tujuannya adalah untuk membantu pengguna merencanakan keuangan lebih baik, baik untuk kebutuhan sehari-hari maupun untuk mencapai tujuan finansial jangka panjang.
 ---------------------------------------------------------------------------------
 Fitur Utama DanaBijak:
 - Pemasukan dan Pengeluaran : Pengguna dapat memasukkan pemasukan dana dan pengeluaran dana berdasarkan kategorinya
