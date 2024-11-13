@@ -37,38 +37,12 @@
                 <i class="fas fa-edit"></i>
                 Edit
               </a>
-              <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteCategoryModal{{ $category->id_category }}">
-                <i class="fas fa-trash"></i>
-                Delete
-              </button>
             </td>
           </tr>
           @endforeach
         </tbody>
       </table>
     </div>
-
-    @foreach($categories as $category)
-    <div class="modal fade" id="deleteCategoryModal{{ $category->id_category }}" tabindex="-1" aria-labelledby="deleteCategoryModal{{ $category->id_category }}" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="deleteCategoryModal{{ $category->id_category }}">Hapus Data Kategori</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Apakah Anda yakin ingin menghapus kategori {{ $category->name_category }}?
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-            <a href="{{ route('categories.delete', $category->id_category) }}" class="btn btn-danger">Hapus</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    @endforeach;
 
   </div>
 

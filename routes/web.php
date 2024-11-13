@@ -54,3 +54,9 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // Auth Routes
 Auth::routes();
+
+// Tentang Kami
+Route::get('/tentang-kami', function () {
+    return view('aboutus.tentang');
+});
+

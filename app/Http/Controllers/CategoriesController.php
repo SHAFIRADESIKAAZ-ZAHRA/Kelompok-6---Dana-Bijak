@@ -52,9 +52,4 @@ class CategoriesController extends Controller
     }
 
     // Delete Data
-    public function delete($id)
-    {
-        Categories::deleteData($id);
-        return redirect()->route('categories')->with('success', 'Data berhasil dihapus!');
-    }
 }

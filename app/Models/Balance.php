@@ -5,54 +5,64 @@ use Illuminate\Database\Eloquent\Model;
 
 class Balance extends Model
 {
-    // Inisilisasi Table
+    // Inisialisasi Table
     protected $table = 'balance';
     public $timestamps = false;
 
-    // Table Pemasukan dan Pengeluaran
-    protected $incomesTable = 'incomes';
-    protected $expensesTable = 'expenses'; 
-
-    // Fill Table
+    // Fillable fields
     protected $fillable = [
         'amount', 'description', 'updated_at'
     ];
 
+    // Define relationships to Incomes and Expenses models
+    public function incomes()
+    {
+        return $this->hasMany(Incomes::class, 'balance_id');
+    }
+
+    public function expenses()
+    {
+        return $this->hasMany(Expenses::class, 'balance_id');
+    }
+
     // Get All Data
     public static function getAll()
     {
-        return Balance::all();
+        return self::all();
     }
 
     // Get Data by ID
     public static function getById($id)
     {
-        return Balance::where('id_balance', $id)->first();
+        return self::where('id_balance', $id)->first();
     }
 
-    // Total Balance
+    // Calculate Total Balance
     public static function totalBalance()
     {
-        $totalBalance = Balance::sum('amount');
-        return $totalBalance;
+        $totalIncome = Incomes::sum('amount');
+        $totalExpense = Expenses::sum('amount');
+        
+        // Total balance = Total incomes - Total expenses
+        return $totalIncome - $totalExpense;
     }
 
-    // Mengambil semua data pemasukan dan pengeluaran
+    // Get all incomes and expenses combined
     public static function getAllIncomesAndExpenses()
     {
-        // Ambil semua data pemasukan dari Tabel Incomes
+        // Get all incomes
         $incomes = Incomes::all();
 
-        // Ambil semua data pengeluaran dari Tabel Expenses
+        // Get all expenses
         $expenses = Expenses::all();
 
-        // Gabungkan data pemasukan dan pengeluaran dengan Join Table
+        // Combine incomes and expenses
         $incomesAndExpenses = $incomes->concat($expenses);
 
-        // Urutkan data pemasukan dan pengeluaran berdasarkan tanggal
+        // Sort by date descending
         $incomesAndExpenses = $incomesAndExpenses->sortByDesc('date');
 
-        // Return data pemasukan dan pengeluaran
+        // Return combined data
         return $incomesAndExpenses;
     }
 }

@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 19, 2024 at 06:42 AM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 13, 2024 at 11:26 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_paynote`
+-- Database: `dana_bijak_test2`
 --
 
 -- --------------------------------------------------------
@@ -38,8 +38,22 @@ CREATE TABLE `balance` (
 --
 
 INSERT INTO `balance` (`id_balance`, `amount`, `updated_at`) VALUES
-(1, 500000.00, '2024-02-18 22:08:55'),
-(2, 250000.00, '2024-02-18 22:09:29');
+(1, 200000.00, '2024-11-10 00:12:45'),
+(2, 200000.00, '2024-11-10 01:27:12'),
+(3, 200000.00, '2024-11-10 01:51:48'),
+(4, 500000.00, '2024-11-10 01:52:11'),
+(5, 100000.00, '2024-11-10 01:52:36'),
+(6, 100000.00, '2024-11-10 02:02:09'),
+(7, -50000.00, '2024-11-10 05:25:57'),
+(8, -50000.00, '2024-11-10 05:53:35'),
+(9, -50000.00, '2024-11-10 05:54:08'),
+(10, -50000.00, '2024-11-10 06:15:53'),
+(11, -50000.00, '2024-11-10 06:21:44'),
+(12, -15000.00, '2024-11-10 06:47:09'),
+(13, 200000.00, '2024-11-12 00:22:15'),
+(14, 10000.00, '2024-11-12 00:25:00'),
+(15, 10000.00, '2024-11-12 00:25:08'),
+(16, 10000.00, '2024-11-12 00:25:17');
 
 -- --------------------------------------------------------
 
@@ -59,11 +73,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id_category`, `name_category`, `created_at`, `updated_at`) VALUES
-(1, 'Food', NULL, NULL),
-(2, 'Transportation', NULL, NULL),
-(3, 'Clothing', NULL, NULL),
-(4, 'Drink', NULL, NULL),
-(5, 'Medical', NULL, NULL);
+(1, 'uang kas', NULL, NULL),
+(2, 'uamg haram', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -79,6 +90,13 @@ CREATE TABLE `expenses` (
   `description` varchar(255) NOT NULL,
   `id_category` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `expenses`
+--
+
+INSERT INTO `expenses` (`id_expense`, `amount`, `date`, `created_at`, `description`, `id_category`) VALUES
+(5, 50000.00, '2024-11-10', '2024-11-11 05:26:19', 'Beli Bunga', 1);
 
 -- --------------------------------------------------------
 
@@ -116,8 +134,8 @@ CREATE TABLE `incomes` (
 --
 
 INSERT INTO `incomes` (`id_income`, `amount`, `date`, `created_at`, `description`, `id_category`) VALUES
-(1, 500000.00, '2024-02-17', '2024-02-18 22:08:55', 'Dana untuk Makan', 1),
-(2, 250000.00, '2024-02-18', '2024-02-18 22:09:29', 'Dana untuk Bensin', 2);
+(5, 10000.00, '2024-11-07', '2024-11-12 00:24:42', 'uang kas bulan oktober', 2),
+(7, 10000.00, '2024-11-11', '2024-11-12 00:25:17', 'gsfdksd', 1);
 
 -- --------------------------------------------------------
 
@@ -227,7 +245,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@example.com', '2019-12-31 17:00:00', '$2y$12$qWOvd2DCs.QviLFWmlf5PuyMfQdrBfS.vGKOGOCn7VitZ3VeWLLQ6', 'qxmk2WBejA', '2019-12-31 17:00:00', NULL);
+(1, 'Nadiyah', 'nadiyahqass@gmail.com', NULL, '$2y$12$3AgqkmZayfr1o8qDMnXZv.93OAKFeznFx8khT2myHTwPXkGWH7IpO', NULL, '2024-11-10 00:11:00', '2024-11-10 00:11:00');
 
 --
 -- Indexes for dumped tables
@@ -315,19 +333,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `balance`
 --
 ALTER TABLE `balance`
-  MODIFY `id_balance` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_balance` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id_category` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_category` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `expenses`
 --
 ALTER TABLE `expenses`
-  MODIFY `id_expense` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_expense` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -339,7 +357,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `incomes`
 --
 ALTER TABLE `incomes`
-  MODIFY `id_income` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_income` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -367,13 +385,13 @@ ALTER TABLE `users`
 -- Constraints for table `expenses`
 --
 ALTER TABLE `expenses`
-  ADD CONSTRAINT `expenses_id_category_foreign` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`);
+  ADD CONSTRAINT `expenses_id_category_foreign` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `incomes`
 --
 ALTER TABLE `incomes`
-  ADD CONSTRAINT `incomes_id_category_foreign` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`);
+  ADD CONSTRAINT `incomes_id_category_foreign` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id_category`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

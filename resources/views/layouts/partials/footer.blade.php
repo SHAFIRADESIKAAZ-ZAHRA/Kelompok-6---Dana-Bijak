@@ -5,7 +5,7 @@
 <footer class="sticky-footer bg-white">
   <div class="container my-auto">
     <div class="copyright text-center my-auto">
-      <span>Copyright &copy; 2023 - PayNote</span>
+      <span>Copyright &copy; 2024 - DanaBijak</span>
     </div>
   </div>
 </footer>
@@ -23,7 +23,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
-          Yakin ingin keluar dari aplikasi?
+          Keluar dari aplikasi?
         </h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">
@@ -32,7 +32,7 @@
         </button>
       </div>
       <div class="modal-body">
-        Pilih tombol "Logout" di bawah jika Anda ingin mengakhiri sesi Anda saat ini.
+        Pilih tombol "Logout" di bawah jika Anda mengakhiri sesi saat ini.
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>

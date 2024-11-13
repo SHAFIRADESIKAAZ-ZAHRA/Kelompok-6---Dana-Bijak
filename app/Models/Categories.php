@@ -39,12 +39,6 @@ class Categories extends Model
         return Categories::where('id_category', $id_category)->update($data);
     }
 
-    // Delete Data
-    public static function deleteData($id)
-    {
-        return Categories::where('id_category', $id)->delete();
-    }
-
     // Get Total Data
     public static function totalCategories()
     {

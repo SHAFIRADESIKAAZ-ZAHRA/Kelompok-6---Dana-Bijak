@@ -18,7 +18,10 @@ return new class extends Migration
             $table->timestamp('created_at')->useCurrent();
             $table->string('description', 255);
             $table->unsignedBigInteger('id_category');
-            $table->foreign('id_category')->references('id_category')->on('categories');
+            $table->foreign('id_category')
+                ->references('id_category')
+                ->on('categories')
+                ->onDelete('cascade'); // Menambahkan cascading delete
         });
     }
 

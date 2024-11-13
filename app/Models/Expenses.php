@@ -55,6 +55,19 @@ class Expenses extends Model
         return false;
     }
 
+       // Update Data
+       public static function updateData($id_expense, $data)
+       {
+           return Expenses::where('id_expense', $id_expense)->update($data);
+       }
+   
+       // Delete Data
+       public static function deleteData($id)
+       {
+           return Expenses::where('id_expense', $id)->delete();
+       }
+   
+
     // Total Pengeluaran
     public static function totalExpenses()
     {

@@ -46,6 +46,31 @@ class IncomesController extends Controller
         }
     }
 
+    
+    public function editPage($id_income)
+    {
+        $title = "Edit Pemasukan";
+        $income = Incomes::getById($id_income);
+        $categories = Categories::all(); // Mengambil semua nilai dikategori
+        return view('dashboard.incomes.edit', compact('title', 'income', 'categories'));
+    }
+    
+
+    // Update Data via Model
+    public function update(Request $request, $id_income)
+    {
+        $data = [
+            'amount'        => $request->amount,
+            'description'   => $request->description,
+            'date'          => $request->date,
+            'id_category'   => $request->id_category,
+            'created_at'    => now(),
+        ];
+
+        Incomes::updateData($id_income, $data);
+        return redirect()->route('incomes')->with('success', 'Data berhasil diubah!');
+    }
+
     // Delete Data
     public function delete($id)
     {

@@ -33,6 +33,7 @@
             <th scope="col">Jumlah</th>
             <th scope="col">Kategori</th>
             <th scope="col">Deskripsi</th>
+            <th scope="col">Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -48,24 +49,37 @@
                 @endforeach
             </td>
             <td>{{ $income->description }}</td>
+            <td>
+                <!-- Edit Button -->
+                <a href="{{ route('incomes.editPage', $income->id_income) }}" class="btn btn-sm btn-warning">
+                    <i class="fas fa-edit"></i> 
+                    Edit
+                </a>
+
+                <!-- Delete Button -->
+                <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteincomeModal{{ $income->id_income }}">
+                    <i class="fas fa-trash-alt"></i> Hapus
+                </button>
+            </td>
           </tr>
           @endforeach
         </tbody>
       </table>
     </div>
 
+    <!-- Modal for Deleting Income -->
     @foreach($incomes as $income)
     <div class="modal fade" id="deleteincomeModal{{ $income->id_income }}" tabindex="-1" aria-labelledby="deleteincomeModal{{ $income->id_income }}" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="deleteincomeModal{{ $income->id_income }}">Hapus Data Kategori</h5>
+            <h5 class="modal-title" id="deleteincomeModal{{ $income->id_income }}">Hapus Data Pemasukan</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            Apakah Anda yakin ingin menghapus kategori {{ $income->name_income }}?
+              Apakah Anda yakin ingin menghapus data pemasukan {{ $income->description }}?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

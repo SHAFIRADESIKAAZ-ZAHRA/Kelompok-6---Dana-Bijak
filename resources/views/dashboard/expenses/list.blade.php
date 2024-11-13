@@ -33,21 +33,37 @@
             <th scope="col">Jumlah</th>
             <th scope="col">Kategori</th>
             <th scope="col">Deskripsi</th>
+            <th scope="col">Aksi</th>
           </tr>
         </thead>
         <tbody>
           @foreach($expenses as $expense)
           <tr>
             <td>{{ $expense->date }}</td>
-            <td>{{ $expense->amount }}</td>
+            <td>Rp {{ number_format($expense->amount, 0, ',', '.') }}</td>
             <td>
               @foreach($categories as $category)
-              @if($category->id_category == $expense->id_category)
-              {{ $category->name_category }}
-              @endif
+                @if($category->id_category == $expense->id_category)
+                  @php
+                    $badgeClass = $categoryColors[$category->name_category] ?? 'badge-secondary';
+                  @endphp
+                  <span class="badge badge-pill {{ $badgeClass }}">{{ $category->name_category }}</span>
+                @endif
               @endforeach
-            </td>
+            </td>            
             <td>{{ $expense->description }}</td>
+            <td>
+                <!-- Edit Button -->
+                <a href="{{ route('expenses.editPage', $expense->id_expense) }}" class="btn btn-sm btn-warning">
+                    <i class="fas fa-edit"></i> 
+                    Edit
+                </a>
+
+                <!-- Delete Button -->
+                <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteexpenseModal{{ $expense->id_expense }}">
+                    <i class="fas fa-trash-alt"></i> Hapus
+                </button>
+            </td>
           </tr>
           @endforeach
         </tbody>
@@ -65,7 +81,7 @@
             </button>
           </div>
           <div class="modal-body">
-            Apakah Anda yakin ingin menghapus kategori {{ $expense->name_expense }}?
+            Apakah Anda yakin ingin menghapus ?{{ $expense->name_expense }}?
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
