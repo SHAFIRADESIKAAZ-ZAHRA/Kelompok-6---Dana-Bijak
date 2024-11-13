@@ -3,6 +3,15 @@
 - Nadiyah Qasamah - 4522210046
 - Shafira Desika Az-Zahra - 4522210084
 
+---------------------------------------------------------------------------------
+DanaBijak adalah sebuah platform manajemen keuangan yang dikembangkan untuk membantu individu dan keluarga dalam mengelola pemasukan dan pengeluaran secara lebih bijaksana dan efisien. Dengan antarmuka yang mudah digunakan, DanaBijak memungkinkan pengguna untuk mencatat transaksi harian, melacak saldo keuangan, dan mengatur pengeluaran dalam berbagai kategori. Tujuannya adalah untuk membantu pengguna merencanakan keuangan lebih baik, baik untuk kebutuhan sehari-hari maupun untuk mencapai tujuan finansial jangka panjang.
+---------------------------------------------------------------------------------
+Fitur Utama DanaBijak:
+- Pemasukan dan Pengeluaran : Pengguna dapat memasukkan pemasukan dana dan pengeluaran dana berdasarkan kategorinya
+- Pencatatan Transaksi: Pengguna dapat dengan mudah mencatat semua transaksi pemasukan dan pengeluaran, sehingga memiliki gambaran yang jelas tentang arus kas mereka.
+- Perencanaan Keuangan: DanaBijak mendukung pengguna dalam membuat rencana keuangan yang efektif, baik untuk kebutuhan mendesak maupun untuk mencapai tujuan keuangan masa depan.
+---------------------------------------------------------------------------------
+Misi DanaBijak adalah membantu setiap orang mencapai keseimbangan finansial yang lebih stabil dan sehat melalui manajemen yang lebih cerdas.
 
 
 **ERD**
