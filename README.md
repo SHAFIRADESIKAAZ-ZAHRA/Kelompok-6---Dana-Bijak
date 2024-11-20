@@ -1,5 +1,5 @@
 # Kelompok 06 - SISTEM INFORMASI DanaBijak
-- Sulis Afryanti Lubis - 4522210046
+- Sulis Afryanti Lubis - 4522210024
 - Nadiyah Qasamah - 4522210046
 - Shafira Desika Az-Zahra - 4522210084
 
@@ -12,7 +12,6 @@ Fitur Utama DanaBijak:
 - Perencanaan Keuangan: DanaBijak mendukung pengguna dalam membuat rencana keuangan yang efektif, baik untuk kebutuhan mendesak maupun untuk mencapai tujuan keuangan masa depan.
 ---------------------------------------------------------------------------------
 Misi DanaBijak adalah membantu setiap orang mencapai keseimbangan finansial yang lebih stabil dan sehat melalui manajemen yang lebih cerdas.
-
 ---------------------------------------------------------------------------------
 **ERD**
 ![WhatsApp Image 2024-11-12 at 23 27 00_b4d7d39b](https://github.com/user-attachments/assets/d9782ae4-1b25-40b6-aaf7-00173802f6ed)
